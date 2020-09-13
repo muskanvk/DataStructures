@@ -1,9 +1,11 @@
 //Question 5 : Design the logic to find the missing number in a sorted array.
-
+// The complexity of this solution will be O(logn) as I am using the approach of binary search to find the missing number and then 
+//further we are dividing the array from the middle i.e n/2
 
 #include <iostream> 
 
 using namespace std; 
+
 
 int findMissing(int arr[], int N) 
 { 
