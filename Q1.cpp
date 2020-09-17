@@ -24,7 +24,8 @@ void DisplayArray( ){
 	cout<<"\n";	
 }
 // 3. INSERT
-void InsertArray( ){
+void InsertArray( ) //Insertion takes O(1) time
+{
 	cout<<"Enter element to insert = ";
 	cin>> element;
 	cout<<"Enter index position = ";
@@ -40,7 +41,8 @@ void InsertArray( ){
 	else printf("Enter a valid position.\n");
 }
 // 4. DELETE
-void DeleteArray(){
+void DeleteArray() //deletion takes O(n) time
+{
 	cout<<"Enter index position = ";
 	cin>> position;
 	if(position <= arraysize)
@@ -55,7 +57,8 @@ void DeleteArray(){
     	printf("invalid position\n");
 }
 // 5. SEARCH
-void SearchArray(){
+void SearchArray() //complexity is O(n)
+{
 	int flag=0;
 	cout<<"Search Key = ";	
 	cin>> element;

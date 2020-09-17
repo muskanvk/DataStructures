@@ -3,13 +3,12 @@
 //further we are dividing the array from the middle i.e n/2
 
 #include <iostream> 
-
 using namespace std; 
 
 
-int findMissing(int arr[], int N) 
+int findMissing(int arr[], int N) //passing array and size as the arguments
 { 
-	int left = 0, right = N - 1; 
+	int left = 0, right = N - 1; //binary search approach used to find the missing number
 	while (left <= right) { 
 
 		int mid = (left + right) / 2; 

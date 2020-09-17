@@ -1,4 +1,4 @@
-/* 3) Implement the logic to:
+/* Question 4: Implement the logic to:
 1. Reverse the elements of an array.
 2. Find Mean, Mode, Median in an array.
 3. Find the Matrix Multiplication.
@@ -12,8 +12,8 @@ int n; //size of the array
 float arr[100]; //declaring the array
 
 
-
-void reverseArray()
+//reversing the array elements complexity : O(n)
+void reverseArray() 
 {   
 	int j;
 	cout<<"Enter the size of array: ";
@@ -25,7 +25,8 @@ void reverseArray()
     {
     	cin>>arr[i];
     }
-
+    
+    //reversing the array using a temp variable. starting index = 0; ending index = n-1
     for(int i=0,j=n-1;i<n/2;i++,j--)
 	{
 		int temp= arr[i];
@@ -58,7 +59,7 @@ void mean(){
     cout<< (double)sum/(double)n;
 }
 
-//finding median of the ungrouped data in the array
+//finding median of the ungrouped data in the array with O(n) complexity
 void median(){
 	cout<<"Enter the size of array: ";
 	cin>>n;
@@ -120,7 +121,8 @@ void mode(){
     cout <<  res;
 }
 
-void matrixMultiplication(){  
+void matrixMultiplication() //complexity is O(n^3) can be optimised by Strassen's Matrix Multiplication
+{  
 int a[10][10],b[10][10],mul[10][10],r,c,i,j,k;    
 cout<<"enter the number of row = ";    
 cin>>r;    
@@ -165,7 +167,8 @@ cout<<"\n";
 }      
 }
 
-void matrixTranspose(){
+void matrixTranspose() //complexity is O(n^3)
+{
    int a[10][10], transpose[10][10], row, column, i, j;
 
    cout << "Enter rows and columns of matrix: ";
