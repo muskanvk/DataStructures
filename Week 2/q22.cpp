@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    int sparseMatrix[100][100];
+    int sparseMatrix[100][100], transpose[100][100];
     int m,n,t,q;
     cout<<"Enter number of rows and columns: ";
     cin>>m>>n;

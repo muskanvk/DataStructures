@@ -5,10 +5,10 @@ matrix is represented using a triplet.
 (c) Multiplication of two matrices. */
 
 #include<iostream>
-
 using namespace std;
-int m,n;
+int m,n,i,j;
 int sparseMatrix[100][100];
+
 
 
 void createSparse(){
@@ -23,8 +23,8 @@ void createSparse(){
 
     // Generating result matrix
     int k = 0;
-    for (int row = 0; row < 5; row++)
-        for (int column = 0; column < 6; column++)
+    for (int row = 0; row < m; row++)
+        for (int column = 0; column < n; column++)
             if (sparseMatrix[row][column] != 0)
             {
                 resultMatrix[0][k] = row;
@@ -37,22 +37,28 @@ void createSparse(){
     cout<<"Triplet Representation : "<<endl;
     for (int row=0; row<3; row++)
     {
-        for (int column = 0; column<size; column++)
+        for (int column = 0; column<size; column++){
             cout<<resultMatrix[row][column]<<" ";
+        }
+        
+    }
 }
 
+void Transpose(){
+
+}
 int main()
 {
 
 	cout<<"Enter number of rows and columns: ";
 	cin>>m>>n;
 	
-	cout << "\nEnter elements of matrix: " << endl;
-
-	for(int i=1;i<m;i++)
-		for(int j=1;j<n;j++)
-			cout << "Enter element a" << i + 1 << j + 1 << ": ";
-		cin >> a[i][j];
+	for(int i=0;i<m;i++){
+		for(int j=0;j<n;j++){
+			cout << "Enter element a" << i + 1 << j + 1 << ": \n";
+			cin >> sparseMatrix[i][j];
+		}
+	}
 
 	createSparse();
 
