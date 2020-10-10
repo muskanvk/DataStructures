@@ -4,8 +4,7 @@ matrix is represented using a triplet.
 (b) Addition of two matrices.
 (c) Multiplication of two matrices. */
 
-// C++ code to perform add, multiply 
-// and transpose on sparse matrices 
+
 #include <iostream> 
 using namespace std; 
 
